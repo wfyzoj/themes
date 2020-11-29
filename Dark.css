@@ -1,425 +1,379 @@
-.ui.header,
-.ui.button,
-.ui.input input,
-.ui.menu,
-.ui.form input:not([type]),
-.ui.form input[type=date],
-.ui.form input[type=datetime-local],
-.ui.form input[type=email],
-.ui.form input[type=file],
-.ui.form input[type=number],
-.ui.form input[type=password],
-.ui.form input[type=search],
-.ui.form input[type=tel],
-.ui.form input[type=text],
-.ui.form input[type=time],
-.ui.form input[type=url],
+/* wfyzoj dark theme */
+/* 导航栏 */
+div.ui.fixed.borderless.menu,
+div.ui.fixed.borderless.menu a {
+    background-color: #3A4047 !important;
+    color: #fff !important;
+}
+div.ui.simple.dropdown.item,
+div.ui.simple.dropdown.item i,
+div.ui.simple.dropdown.item div.ui.fixed.borderless.menu a{
+    background-color: #3A4047 !important;
+    color: #fff !important;
+
+}
+div.ui.simple.dropdown.item {
+    transition: .1s;
+}
+div.ui.simple.dropdown.item:hover,
+div.ui.simple.dropdown.item div.ui.fixed.borderless.menu a:hover{
+    background-color: #444 !important;
+    border-radius: 0px;
+}
+div.ui.menu a.item {
+    transition: .1s;
+}
+div.ui.menu a.item:hover {
+    background-color: #444 !important;
+    border-radius: 0px;
+}
+div.ui.menu a.item.active {
+    background-color: #555 !important;
+}
+a.header > img {
+    filter: invert(1);
+}
+div.ui.menu div.right.menu a.button {
+    background-color: #444 !important;
+}
+div.ui.menu div.right.menu a.button.primary {
+    background-color: #2789d3 !important;
+}
+div.menu.fixed div.right.menu div.menu {
+    background-color: #3A4047 !important;
+}
+div.menu.fixed div.right.menu div.menu a.item {
+    background-color: #3A4047 !important;
+    border: none !important;
+    color: #fff !important;
+}
+div.menu.fixed div.right.menu div.menu a.item:hover {
+    background-color: #333 !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* 页面文字及背景 */
 h1,
 h2,
 h3,
 h4,
-h5
- {
-  font-family:
-    Lato,
-    -apple-system,
-    'PingFang SC',/* Apple */
-    'Source Han Sans SC',
-    'Noto Sans CJK SC', /* Google */
-    'Microsoft Yahei',
-    'Lantinghei SC',
-    'Hiragino Sans GB',
-    'Microsoft Sans Serif', /* M$ */
-    'WenQuanYi Micro Hei', /* *nix */
-    sans-serif;
-    color: #7b8799;    
+h5,
+h6,
+body,
+th,
+td,
+table,
+label,
+div.column,
+p,
+div.title {
+    color: #fff !important;
 }
-body
-{
-  background: #18191d;
-  color: #f5f5f5;
+body {
+    background-color: #2d2d2d;
 }
-
-a,
-a.black-link {
-  color: #6c9fcd;
+.ui.header.top,
+div.pagination,
+div.selection,
+input,
+div.message {
+    background-color: #454545 !important;
+    color: #fff !important
 }
-
-a:hover,
-a.black-link:hover {
-  color: #4183c4;
+div.pagination > a {
+    color: #aaa !important;
 }
-
-.font-content {
-  font-family: 'Open Sans', 'Source Han Sans SC', 'Noto Sans CJK SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
-}
-
-.markdown-edit {
-  font-family: 'Fira Mono', 'Noto Sans CJK SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', monospace;
-}
-
-.padding {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.ui.segment:first-child {
-    margin-top: 0;
-}
-
-.ui.segment:last-child {
-  margin-bottom: 3px;
-}
-
-.hljs {
-    background: #000 !important;
-}
-
-.ui.footer.segment {
-    margin: 2em 0em 0em;
-    padding: 1em 0em;
-    border: none;
-}
-
-th {
-    white-space: nowrap;
-}
-
-pre {
-    tab-size: 4;
-    overflow: auto;
-    background: #2a2f33;
-}
-
-img {
-	max-width: 100%;
-}
-
-table.center.aligned ul, table.center.aligned ol {
-	display: inline-block;
-	text-align: left;
-}
-
-body > .ui.page.dimmer {
-  position: fixed !important;
-}
-
-:not(.status_detail).status.success,
-.title:hover .status_detail.status.success,
-.title.active .status_detail.status.success,
-:not(.status_detail).status.submitted,
-.title:hover .status_detail.status.submitted,
-.title.active .status_detail.status.submitted,
-:not(.status_detail).status.accepted,
-.title:hover .status_detail.status.accepted,
-.title.active .status_detail.status.accepted {
-    color: forestgreen;
-}
-
-:not(.status_detail).status.wrong_answer,
-.title:hover .status_detail.status.wrong_answer,
-.title.active .status_detail.status.wrong_answer {
-    color: red;
-}
-
-:not(.status_detail).status.invalid_interaction,
-.title:hover .status_detail.status.invalid_interaction,
-.title.active .status_detail.status.invalid_interaction,
-:not(.status_detail).status.runtime_error,
-.title:hover .status_detail.status.runtime_error,
-.title.active .status_detail.status.runtime_error,
-:not(.status_detail).status.file_error,
-.title:hover .status_detail.status.file_error,
-.title.active .status_detail.status.file_error {
-    color: darkorchid;
-}
-
-:not(.status_detail).status.memory_limit_exceeded,
-.title:hover .status_detail.status.memory_limit_exceeded,
-.title.active .status_detail.status.memory_limit_exceeded,
-:not(.status_detail).status.time_limit_exceeded,
-.title:hover .status_detail.status.time_limit_exceeded,
-.title.active .status_detail.status.time_limit_exceeded,
-:not(.status_detail).status.output_limit_exceeded,
-.title:hover .status_detail.status.output_limit_exceeded,
-.title.active .status_detail.status.output_limit_exceeded {
-    color: sandybrown;
-}
-
-:not(.status_detail).status.waiting,
-.title:hover .status_detail.status.waiting,
-.title.active .status_detail.status.waiting,
-:not(.status_detail).status.system_error {
-    color: grey;
-}
-
-:not(.status_detail).status.unknown {
-    color: #e28989;
-}
-
-:not(.status_detail).status.running,
-.title:hover .status_detail.status.running,
-.title.active .status_detail.status.running,
-:not(.status_detail).status.pending,
-.title:hover .status_detail.status.pending,
-.title.active .status_detail.status.pending,
-:not(.status_detail).status.judging,
-.title:hover .status_detail.status.judging,
-.title.active .status_detail.status.judging {
-    color: #6cf;
-}
-
-:not(.status_detail).status.partially_correct,
-.title:hover .status_detail.status.partially_correct,
-.title.active .status_detail.status.partially_correct {
-  color: #01bab2;
-}
-
-:not(.status_detail).status.judgement_failed,
-.title:hover .status_detail.status.judgement_failed,
-.title.active .status_detail.status.judgement_failed {
-  color: #FF5722;
-}
-
-:not(.status_detail).status.skipped,
-.title:hover .status_detail.status.skipped,
-.title.active .status_detail.status.skipped {
-  color: #78909C;
-}
-
-:not(.status_detail).status.compiling {
-    color: #00b5ad;
-}
-
-:not(.status_detail).status.no_testdata {
-    color: brown;
-}
-
-:not(.status_detail).status.compile_error {
-    color: rgb(0, 68, 136);
-}
-
-/* score color */
-.score_0 {
-    color: red;
-}
-
-.score_1 {
-    color: #ff4b00;
-}
-
-.score_2 {
-    color: #ff6200;
-}
-
-.score_3 {
-    color: #ffa900;
-}
-
-.score_4 {
-    color: #ffd800;
-}
-
-.score_5 {
-    color: #c8ff00;
-}
-
-.score_6 {
-    color: #a5ff00;
-}
-
-.score_7 {
-    color: #52ff00;
-}
-
-.score_8 {
-    color: #41f741;
-}
-
-.score_9 {
-    color: #34d034;
-}
-
-.score_10 {
-    color: forestgreen;
-}
-
-.score {
-    text-shadow: 0 0 0.1px;
-}
-
-.rating_up {
-  color: #dd4b39;
-}
-
-.rating_down {
-  color: #3d9400;
-}
-
-/* code tag */
-:not(pre) > code {
-    display: inline-block;
-    font-size: 0.94em;
-    font-weight: bold;
-    padding: 0 1px;
-    vertical-align: bottom;
-}
-
-code {
-    font-family: "Fira Mono","Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
-}
-
-/* Animated spinner */
-@keyframes spinner-icon-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.spinner.icon:before {
-  animation: spinner-icon-rotate 3s linear infinite;
-  display: block;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.25);
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(128, 135, 139, 0.8);
-}
-
-.ui.top.attached.block.header i.icon {
-  font-size: 1em;
-  vertical-align: initial;
-}
-
-.ui.selection.dropdown .menu>.item {
-  padding-left: 0.8rem !important;
-  padding-right: 0 !important;
-}
-.ui.attached.segment,
 .ui.segment,
-.ui.card,
-.ui.attached.menu:not(.tabular){
-    background: #2a2f33;
-    border: 0px;
-}
-.ui.top.attached.header,
-.ui.accordion .accordion .active.content,
-.ui.accordion .active.content,
-.ui.styled.accordion .accordion .content,
-.ui.styled.accordion .content,
-.ui.pagination.menu,
-.ui.column.grid>[class*="three wide"].column, 
-.ui.grid>.column.row>[class*="three wide"].column, 
-.ui.grid>.row>[class*="three wide"].column, 
-.ui.grid>[class*="three wide"].column,
-.ui.column.grid>[class*="four wide"].column,
-.ui.grid>.column.row>[class*="four wide"].column,
-.ui.grid>.row>[class*="four wide"].column,
-.ui.grid>[class*="four wide"].column,
-.ui.label,
-.ui.block.header,
-.ui.form input[type=checkbox], 
-.ui.form textarea,
-.ui.tabular.menu .active.item
-{
-    background: #373c40;
-    border: 0px;
-}
-.ui.menu.fixed{
-    background: #3A4047;
-}
-.ui.menu .item,
-.ui.grid,
-.ui.toggle.checkbox input:focus:checked~.box, 
-.ui.toggle.checkbox input:focus:checked~label,
-.ui.toggle.checkbox input:checked~.box, 
-.ui.toggle.checkbox input:checked~label,
-.ui.checkbox input:focus~label,
-.ui.toggle.checkbox .box, 
-.ui.toggle.checkbox label,
-.ui.form .inline.field>:first-child, 
-.ui.form .inline.fields .field>:first-child
-{
-    color:#fff!important;
-}
-.ui.menu:not(.vertical) .item,
-.ui.form .inline.fields>label,
-.ui.pagination.menu .active.item,
-.ui.card>.extra a:not(.ui), 
-.ui.cards>.card>.extra a:not(.ui),
-.ui.card .meta>a:not(.ui), 
-.ui.cards>.card .meta>a:not(.ui)
-.ui.form input[type=checkbox], .ui.form textarea
-{
-    color: #fff
-}
-.ui.basic.table th,
 .ui.table,
-.ui.card>.content>.header,
-.ui.cards>.card .meta,
-.ui.label,
-.ui.block.header,
-.ui.form .field>label,
-b, strong{
-    color: #fff;
+tbody,
+thead,
+td,
+th,
+p {
+    background-color: #44444400 !important;
+    color: #fff !important;
 }
-.ui.input input,
-.ui.form input:not([type]),
-.ui.form input[type=date],
-.ui.form input[type=datetime-local],
-.ui.form input[type=email],
-.ui.form input[type=file],
-.ui.form input[type=number],
-.ui.form input[type=password],
-.ui.form input[type=search],
-.ui.form input[type=tel],
-.ui.form input[type=text],
-.ui.form input[type=time],
-.ui.form input[type=url],
-.ui.toggle.checkbox .box:before,
-.ui.toggle.checkbox label:before,
-.ui.vertical.menu,
-.ui.selection.dropdown,
-.ui.message:first-child
-{
-    background: #282e33;
-    color: #fff;
+.ui.footer {
+    background-color: #2d2d2d !important;
 }
-.ui.search.focus input,
-.ui.date.focus input,
-.ui.datetime-local.focus input,
-.ui.email.focus input,
-.ui.file.focus input,
-.ui.number.focus input,
-.ui.password.focus input,
-.ui.tel.focus input,
-.ui.text.focus input,
-.ui.url.focus input{
-    background: #3A4047;
-    color: #fff;
+div.accordion {
+    background-color: #44444400 !important;
+}
+div.ui.header {
+    color: #66ccff !important;
+}
+span.date {
+    color: #bbb !important;
+}
+div.actions > a {
+    color: #777 !important;
+}
+
+/* 各类超链接 */
+a {
+    color: #66ccff;
+}
+a.item {
+    color: #000 !important;
+}
+div.tabular a.item {
+    color: #eee !important;
+}
+div.menu a.item {
+    color: #fff !important;
+}
+a.black-link {
+    color: #fff !important;
+}
+a.author {
+    color: #33aacc !important;
+}
+
+/* 比赛 1A 底色 */
+td[style="background: rgb(244, 255, 245); "] {
+    background-color: #3d3d3d !important;
+}
+
+/* 「一言」的来源 */
+#hitokoto-from {
+    color: #ddd !important;
+}
+
+
+/* 代码显示框 */
+code {
+    color: #ccc !important;
+}
+.pl-p,
+.pl-n {
+    color: #cccccc !important;
+}
+
+/* ACE Editor */
+#editor,
+#languages-menu,
+div.ace_gutter {
+    background-color: #333 !important;
+}
+#languages-menu > a,
+div.ace_gutter {
+    color: #eee !important;
+}
+div.ace_active-line,
+div.ace_gutter-active-line {
+    background-color: #444 !important;
+}
+span.ace_paren,
+span.ace_identifier {
+    color: #eee !important;
+}
+span.ace_operator {
+    color: #aaa !important;
+}
+div.ace_selection {
+    background-color: #626262 !important;
+}
+div.ace_cursor {
+    border-color: #aaa !important;
+}
+#languages-menu a.item.active {
+    background-color: #4a4a4a !important;
+}
+
+/* 评测状态 */
+span.status.accepted,
+span.score.score_10 {
+    color: #00d000 !important;
+}
+span.status.wrong_answer {
+    color: red !important;
+}
+span.status.runtime_error,
+span.status.invalid_interaction,
+span.status.file_error {
+    color: #bb54ee !important;
+}
+span.status.time_limit_exceeded,
+span.status.memory_limit_exceeded,
+span.status.output_limit_exceeded {
+    color: #f4a460 !important;
+}
+span.status.compile_error {
+    color: blue !important;
+}
+span.status.partially_correct {
+    color: cyan !important;
+}
+span.status.running{
+    color: rgb(102, 204, 255) !important;
+}
+span.status.skipped,
+span.status.waiting{
+    color: #aaa !important;
+}
+
+
+/* 按钮增加透明度, 防止颜色太突出 */
+a.ui.button {
+    opacity: 0.85;
+}
+
+/* 标签及显示分类标签 */
+span.ui.label {
+    background-color: #666;
+    color: #eee;
+}
+#show_tag_title_div {
+    background-color: #454545;
+}
+#show_tag_button {
+    color: #fff !important;
+}
+i.search.icon {
+    color: #eee !important;
+}
+.ui.toggle.checkbox input:checked ~ label,
+.ui.toggle.checkbox input:focus:checked ~ label {
+    color: #fff !important;
+}
+
+/* 页面右上角, 功能性按钮 */
+form[action="/find_user"] button {
+    color: #eee !important;
+    background-color: #5f5f5f !important;
+}
+form[action="/find_user"] button:hover {
+    color: #eee !important;
+    background-color: #555 !important;
+}
+#add_problem_dropdown {
+    background-color: #5f5f5f !important;
+    color: #fff !important;
+}
+#add_problem_dropdown:hover {
+    background-color: #555 !important;
+}
+
+/* textarea */
+textarea.markdown-edit,
+textarea[name="comment"] {
+    background-color: #454545 !important;
+    color: #fff !important;
+}
+
+/* 选择栏 */
+div.menu > div.item[data-value] {
+    background-color: #454545 !important;
+    border-top: 1px solid #3d3d3d !important;
+    color: #fff !important;
+    transition: 0.1s ease;
+}
+div.menu > div.item[data-value]:hover {
+    background-color: #666 !important;
+}
+div.results {
+    background-color: #454545 !important;
+    color: #eee !important;
+}
+a.result:hover,
+a.result.active {
+    background-color: #666 !important;
+}
+div.menu.transition:not(.pagination),
+div.menu.transition:not(.pagination) > a {
+    background-color: #444 !important;
+    color: #eee !important;
+}
+div.menu:not(.pagination) > a.item {
+    background-color: #333 !important;
+    transition: .1s;
+}
+div.menu:not(.pagination) > a.item:hover {
+    background-color: #555 !important;
+}
+
+/* 个人中心 */
+#user_card div.content {
+    background-color: #2d2d2d !important;
+    color: #fff !important;
+}
+#user_card div.header,
+#user_card div.meta,
+#user_card a.group {
+    color: #fff !important;
+}
+#user_card div.extra.content > a {
+    color: #fff !important;
+}
+#user_card div.extra.content > a:hover {
+    color: #1e70bf !important;
+}
+
+/* 表格 */
+.ui.celled.table tr td,
+.ui.celled.table tr th {
+    border-right: 1px solid #888 !important;
+    border-bottom: 1px solid #888 !important;
+}
+.ui.celled.table td:first-child,
+.ui.celled.table th:first-child {
+    border-left: 1px solid #888 !important;
+}
+.ui.celled.table tr th {
+    background-color: #454545 !important;
+    border-top: 1px solid #888 !important;
+    border-radius: 0px !important;
+}
+
+/* 比赛中的‘提交时间’ */
+div.submit_time {
+    color: #888 !important;
+}
+
+/* segment */
+div.segment {
+    border-color: #555 !important;
+}
+div.accordion {
+    box-shadow: 0px 0px 1px 1px #555 !important;
+}
+div.segment,
+.ui.top.attached.block.header {
+    border-color: #777 !important;
+}
+
+/* div.message */
+div.message .header,
+div.message .description {
+    color: #fff !important;
+}
+
+/* 登录界面的按钮 */
+div #login {
+    background-color: #666 !important;
+    color: #eee !important;
+}
+
+/* 后台管理 中的内容 */
+div.statistic > div.value,
+div.statistic > div.label {
+    color: #eee !important;
+}
+
+/* 重新评测 按钮及界面 */
+#rejudge-button{
+    color: #ddd !important;
+}
+#modal-rejudge i{
+    color: #ddd !important;
+}
+#modal-rejudge a.green,
+#modal-rejudge a.green i{
+    color: #2ecc40 !important;
+}
+
+/* 讨论中 divider */
+i.divider{
+    color: #eee !important;
 }
